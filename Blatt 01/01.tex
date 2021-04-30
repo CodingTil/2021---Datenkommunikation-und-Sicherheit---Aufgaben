@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{listings}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes.multipart}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Tutorium 02 \\ Abgabegruppe 01}
+\chead{Blatt 01 \\ DatKom}
+\rhead{Andrés Montoya, 405409 \\ Til Mohr, 405959}
+
+\begin{document}
+
+\begin{center}\fcolorbox{red}{yellow}{\begin{minipage}{35em}
+	Bei uns war ursprünglich noch ein Dritter in unserer Abgabegruppe eingeteilt. Wir haben ihn vor über einer Woche versucht per E-Mail zu erreichen, leider erfolglos.\\
+	Nach Ablauf der Anmeldefrist zu den Abgabegruppen haben wir gesehen, dass diese Person leider unsere Abgabegruppe verlassen hat.\\
+	Bisher konnten wir noch keinen Dritten für unsere Abgabegruppe finden.
+\end{minipage}}\end{center}
+
+
+
+\section*{Aufgabe 1.1}
+\begin{enumerate}[label=\roman*)]
+	\item	\textbf{Verbindungsorientiert}. Sinnvoll, um beispielsweise die Authentifizierung (z.B. \textit{Habe ich ein Abo?}) einmal durchzuführen. Damit verbraucht das eigentliche Streaming weniger Daten.\\
+			\textbf{Unbestätigt}. Hier braucht der Streamingserver keinerlei Bestätigung, dass die Streaming-Pakete erfolgreich beim Client eingetroffen sind.\\
+			\textbf{Unzuverlässig}. Da wir hier einen unbestätigten Dienst haben, können wir keinen zuverlässigen Dienst haben. Zusätzlich sind einzelne Übertragungsfehler oftmals ertragbar bei Streamingdiensten.
+	
+	\item	\textbf{Verbindungsorientiert}. Sinnvoll, um zu überprüfen, ob das andere Konto überhaupt existiert.\\
+			\textbf{Bestätigt}. Der Bankkunde hat Interesse daran, dass die Überweisung auch ankommt.
+			\textbf{Zuverlässig}. Die Überweisung soll korrekt durchgehen und nicht verfälscht werden können.
+	
+	\item	\textbf{Verbindungsorientiert}, falls die Beantragung der Briefwahl mit betrachtet wird. Hierbei muss der Bürger sich auch authentifizieren, bevor der eigentliche Datenaustausch (Briefwahl) stattfinden kann. Sonst \textbf{Verbindungslos}, da dies einen extra Schritt darstellen würde.\\
+			\textbf{Bestätigt}. Man möchte schon sicherstellen, dass seine Stimme gewertet wird. In der Praxis jedoch \textbf{Unbestätigt}.\\
+			\textbf{Zuverlässig}. Niemand soll die Wahlstimme verfälschen können (das Kreuz ändern). In der Praxis jedoch unmöglich.
+\end{enumerate}
+
+
+\newpage
+
+
+\section*{Aufgabe 1.2}
+Ja, es kann keinen unbestätigten zuverlässigen Dienst geben. Ein zuverlässiger Dienst beruht auf Bestätigung, um die Korrektheit und Vollständigkeit der übertragenen Daten zu verifizieren. Ohne Bestätigung ist dies also nicht möglich.
+
+
+
+
+
+\section*{Aufgabe 1.3}
+\begin{enumerate}[label=(\arabic*)]
+	\item \verb|Con.Req; UnitData.Req(CR)|
+	\item \verb|UnitData.Ind(CC); Con.Cnf|
+	\item \verb|UnitData.Ind(DR); Dis.Ind|
+	\item \verb|UnitData.Ind(DR); Dis.Ind|
+	\item \verb|UnitData.Ind(CR); Con.Ind|
+	\item \verb|Con.Rsp; UnitData.Req(CC)|
+	\item \verb|Dis.Req; UnitData.Req(DR)|
+	\item \verb|Dis.Req; UnitData.Req(DR)|
+\end{enumerate}
+
+
+
+
+
+\section*{Aufgabe 1.4}
+\verb|g| ist eine \textbf{ICI}, da \verb|g| nur eine Information ist, wie sich die Schicht des Alternating Bit Protocols zu verhalten hat. \verb|g| wird also nicht horizontal kommuniziert.\\
+Die Quittung \verb|s| ist eine \textbf{PCI}, da diese nur für die Schicht des Alternating Bit Protocols interessant ist und auch horizontal kommuniziert wird.
+
+
+\newpage
+
+
+\section*{Aufgabe 1.5}
+\begin{enumerate}[label=\arabic*.]
+	\item 	Sowohl auf Server als auch auf Client muss ein UDP IPv6 Socket erstellt werden, mit dem Daten empfangen / gesendet werden können:\\
+			\verb|int socket = socket(AF_INET6, SOCK_DGRAM, 0)|
+	\item 	Auf dem Server muss nun der socket zu einer Adresse \verb|addr| gebinded werden:\\
+			\verb|bind(socket, addr, sizeof addr)|
+	\item	Warten auf eine Nachricht vom Socket geht nun mit \verb|recvfrom|.
+	\item	Senden von Nachrichten vom Socket geht nun mit \verb|sendto|.
+	\item	Den Socket kann man nun schließen mit \verb|close(socket)|.
+\end{enumerate}
+
+
+\end{document}
