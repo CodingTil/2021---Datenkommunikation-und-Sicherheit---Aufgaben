@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  30 APR 2021 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  1 MAY 2021 12:50
 entering extended mode
 **./01.tex
 (01.tex
@@ -743,21 +743,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3] (01.aux) ) 
 Here is how much of TeX's memory you used:
- 16659 strings out of 479321
- 332547 string characters out of 2855115
+ 16657 strings out of 479321
+ 332526 string characters out of 2855115
  644918 words of memory out of 3000000
- 33847 multiletter control sequences out of 15000+600000
- 408269 words of font info for 44 fonts, out of 8000000 for 9000
+ 33846 multiletter control sequences out of 15000+600000
+ 407922 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,12n,116p,431b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Til Mohr/AppData/Local/Programs/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/Til Mohr/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on 01.pdf (3 pages, 59427 bytes).
+MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on 01.pdf (3 pages, 49435 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 27 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
