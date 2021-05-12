@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  11 MAY 2021 15:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  12 MAY 2021 17:38
 entering extended mode
 **./02.tex
 (02.tex
@@ -733,12 +733,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{C:/Users/Til Mohr/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
- <./2.1_a.png> <./2.1_d.png>]
-Overfull \hbox (9.72858pt too wide) in paragraph at lines 60--61
-\OT1/cmr/m/n/12 Bestati-gun-gen auf der Bitubertra-gungss-chicht stat-tfinden
-, und dies da-her pro-tokol-labhangig
- []
-
+ <./2.1_a.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -747,7 +742,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[2]
+[2 <./2.1_d.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 27.18335pt, for example:
@@ -756,15 +751,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3] (02.aux) ) 
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[4] (02.aux) ) 
 Here is how much of TeX's memory you used:
- 16673 strings out of 479321
- 332726 string characters out of 2855115
- 643918 words of memory out of 3000000
- 33858 multiletter control sequences out of 15000+600000
- 408437 words of font info for 44 fonts, out of 8000000 for 9000
+ 16672 strings out of 479321
+ 332711 string characters out of 2855115
+ 644918 words of memory out of 3000000
+ 33857 multiletter control sequences out of 15000+600000
+ 408130 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,12n,116p,431b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,12n,116p,431b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Til Mohr\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
 /ec/dpi600\tcrm1200.pk><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Til Mohr/AppData/Local/Programs/Mi
@@ -776,12 +780,10 @@ Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb
 m/cmr6.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmr8.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Til Mohr/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Til Mohr/AppDa
-ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on 02.pdf (3 pages, 312801 bytes).
+eX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on 02.pdf (4 pages, 299463 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
