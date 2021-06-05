@@ -52,7 +52,7 @@ Es wird also eine Datenrate von mind. $768 \text{kHz} \cdot 32 \text{Bit} = 2457
 \section*{Aufgabe 3.3}
 \begin{enumerate}[label=\alph*)]
 	\item	Gestuffte Bits sind unterstrichen:
-			$$01111110 011111\underline{0}10 01000111 11000111 11\underline{0}100000 01111110$$
+			$$01111110 011111\underline{0}10 01000111 11\underline{0}000111 11\underline{0}100000 01111110$$
 	
 	\item	Gestuffte Character sind unterstrichen:
 			$$11100000 01111110 01111110 01000111 11000111 \underline{11100000} 11100000 11100000 01111110$$
@@ -68,8 +68,8 @@ Es wird also eine Datenrate von mind. $768 \text{kHz} \cdot 32 \text{Bit} = 2457
 	\item[$40$]		$$40 \text{Byte} = 40 \cdot 8 \text{Bit} = 320 \text{Bit}$$
 					$$\text{ PER } = 1 - (1-10^{-5})^{320} \approx 1 - 0.996805098594 = 0.00319490140594$$
 	
-	\item[$1400$]	$$1400 \text{Byte} = 1400 \cdot 8 \text{Bit} = 11200 \text{Bit}$$
-					$$\text{ PER } = 1 - (1-10^{-5})^{11200} \approx 1 - 0.894043756833 = 0.105956243167$$
+	\item[$1500$]	$$1500 \text{Byte} = 1500 \cdot 8 \text{Bit} = 12000 \text{Bit}$$
+					$$\text{ PER } = 1 - (1-10^{-5})^{12000} \approx 1 - 0.88691990456 = 0.11308009543$$
 \end{itemize}
 
 
@@ -88,7 +88,7 @@ Es wird also eine Datenrate von mind. $768 \text{kHz} \cdot 32 \text{Bit} = 2457
 
 \section*{Aufgabe 3.6}
 \begin{enumerate}[label=\alph*)]
-	\item	$101000110000 \div 10101$ liefert uns den Rest $1101$.\\
+	\item	$101000110000 \div 10101$ liefert uns den Rest $1101$. Zu übertragender Block: $101000111101$\\
 			\includegraphics[scale=0.6]{3.6_a.png}
 	
 	\item	$011111000101 \div 10101$ liefert uns einen Rest $\neq 0$. Daher ist ein Fehler aufgetreten.\\

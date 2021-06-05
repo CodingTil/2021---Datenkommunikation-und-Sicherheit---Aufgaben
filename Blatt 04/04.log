@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  29 MAY 2021 17:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  5 JUN 2021 16:25
 entering extended mode
-**./03.tex
-(03.tex
+**./04.tex
+(04.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (C:\Users\Til Mohr\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -623,8 +623,8 @@ pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count305
 \l__pdf_internal_box=\box84
-) (03.aux)
-\openout1 = `03.aux'.
+) (04.aux)
+\openout1 = `04.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
 LaTeX Font Info:    ... okay on input line 22.
@@ -722,16 +722,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
 [2]
-<3.6_a.png, id=17, 647.92062pt x 262.9825pt>
-File: 3.6_a.png Graphic file (type png)
-<use 3.6_a.png>
-Package pdftex.def Info: 3.6_a.png  used on input line 92.
-(pdftex.def)             Requested size: 388.75537pt x 157.7907pt.
-<3.6_b.png, id=19, 648.4225pt x 399.4925pt>
-File: 3.6_b.png Graphic file (type png)
-<use 3.6_b.png>
-Package pdftex.def Info: 3.6_b.png  used on input line 95.
-(pdftex.def)             Requested size: 389.0565pt x 239.69734pt.
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -741,26 +739,54 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
 
-[3 <./3.6_a.png> <./3.6_b.png>] (03.aux) ) 
+[3]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[4]
+<4.4_b.png, id=23, 1315.41437pt x 796.47563pt>
+File: 4.4_b.png Graphic file (type png)
+<use 4.4_b.png>
+Package pdftex.def Info: 4.4_b.png  used on input line 213.
+(pdftex.def)             Requested size: 473.54881pt x 286.731pt.
+
+Overfull \hbox (19.22664pt too wide) in paragraph at lines 213--214
+[][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.18335pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.18335pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-15.18335pt}.
+
+[5 <./4.4_b.png>] (04.aux) ) 
 Here is how much of TeX's memory you used:
- 16667 strings out of 479321
- 332654 string characters out of 2855115
- 646918 words of memory out of 3000000
- 33854 multiletter control sequences out of 15000+600000
+ 16660 strings out of 479321
+ 332558 string characters out of 2855115
+ 647918 words of memory out of 3000000
+ 33848 multiletter control sequences out of 15000+600000
  407446 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,12n,116p,431b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/Til Mohr/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Til Mohr/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Til
- Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb>
-Output written on 03.pdf (3 pages, 183278 bytes).
+ 113i,12n,116p,431b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Til Mohr/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Til Mohr/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Til Mo
+hr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/U
+sers/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8
+.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb>
+Output written on 04.pdf (5 pages, 572033 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
