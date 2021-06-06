@@ -36,8 +36,17 @@
 			Übertragung eines Rahmens: $$\frac{4}{1000} \text{s} + \frac{12896 \text{b}}{100 \cdot 10^6 \frac{\text{b}}{\text{s}}} = 0.00412896 \text{s}$$
 			Übertragung eines ACK: $$\frac{4}{1000} \text{s} + \frac{96 \text{b}}{100 \cdot 10^6 \frac{\text{b}}{\text{s}}} = 0.00400096 \text{s}$$
 			Maximale Nutzdatenrate: $$\frac{12800 \text{b}}{0.00412896 \text{s} + 0.00400096 \text{s}} = 1574431.23672 \frac{\text{b}}{\text{s}} \hat{=} 1.57443123672 \frac{\text{Mb}}{\text{s}}$$
-	\item	
-	\item	
+	\item	Wahrscheinlichkeit, dass eine komplette Übertragung (Rahmen + ACK) erfolgreich ist: $$(1 - 10^{-4})^{12896 \text{b} + 96 \text{b}} = 0.272732187262$$
+			Mittlere Nutzdatenrate: $$0.272732187262 \cdot 1574431.23672 \frac{\text{b}}{\text{s}} = 429398.074885 \frac{\text{b}}{\text{s}} \hat{=} 429.398074885 \frac{\text{kb}}{\text{s}}$$
+	\item	\begin{enumerate}[label=\roman*)]
+				\item	Um die Ntzdatenrate aus a) zu erreichen, können wir die Rahmengröße auf $1$ setzen. Dadurch arbeitet unser Sliding-Window-Verfahren genauso wie das Stop-And-Wait-Protokoll, weshalb die Nutzdatenrate gleich ist.
+				\item	Es dauert mindestens $$0.00412896 \text{s} + 0.00400096 \text{s} = 0.00812992 \text{s}$$, bis der erste Rahmen des Fensters bestätigt wird.\\
+						Das Absenden eines Rahmens beträgt $$\frac{12896 \text{b}}{100 \cdot 10^6 \frac{\text{b}}{\text{s}}} = 0.00012896 \text{s}$$
+						Um die Leistung des Kanals komplett ausnutzen zu können, müssen wir mindestens so viele Rahmen in unserer Fensterzeit $0.00812992 \text{s}$ senden, dass keine Pausen entstehen. Damit benötigen wir eine Fenstergröße von mindestens 
+						$$\lceil \frac{0.00812992 \text{s}}{0.00012896 \text{s}} \rceil = \lceil 63.0421836228 \rceil = 64$$
+						Rahmen.\\
+						Ab unter 64 Rahmen pro Fenster, sprich z.B. 63 Rahmen, hätten wir schon eine Wartezeit von mindestens $0.00000544 \text{s}$. In dieser Zeit ist der Kanal ungenutzt.
+			\end{enumerate}
 \end{enumerate}
 
 
@@ -48,13 +57,13 @@
 \begin{enumerate}[label=\alph*)]
 	\item	\begin{enumerate}[label=\roman*)]
 				\item	Latenz: $$\frac{1000 \text{km}}{200000 \frac{\text{km}}{\text{s}}} = \frac{1}{200} \text{s}$$
-						Senden eines Rahmens: $$\frac{2500 \text{b}}{1 \cdot 10^9 \frac{b}{s}} = 0.0000025 \text{s}$$
-						Es kann also ein Rahmen alle $0.0000025 \text{s}$ auf die Leitung gelegt werden. Es braucht nun weitere $2 \cdot \frac{1}{200} \text{s}$ bis die Bestätigung des Rahmens ankommt.\\
-						Anzahl Rahmen: $$\frac{2 \cdot \frac{1}{200} \text{s}}{0.0000025 \text{s}} = 4000$$
-				\item	Da wir $4000$ Rahmen "gleichzeitig" senden können, benötigen wir mind. $4000 + 1$ Sequenznummern. Diese können wir mit 12 Bit darstellen: $$\lceil lb(4001) \rceil = 12$$
-				\item	Genau gleich?
+						Senden eines Rahmens: $$\frac{2500 \cdot 8 \text{b}}{1 \cdot 10^9 \frac{b}{s}} = 0.00002 \text{s}$$
+						Es kann also ein Rahmen alle $0.00002 \text{s}$ auf die Leitung gelegt werden. Es braucht nun weitere $(\frac{1}{200} \text{s} + 0.00002 \text{s}) + \frac{1}{200} \text{s} = 0.01002 \text{s}$ bis die Bestätigung des Rahmens ankommt.\\
+						Anzahl Rahmen: $$\frac{0.01002 \text{s}}{0.00002 \text{s}} = 501$$
+				\item	Da wir $501$ Rahmen "gleichzeitig" senden können, benötigen wir mind. $501 + 1$ Sequenznummern. Diese können wir mit $9$ Bit darstellen: $$\lceil lb(502) \rceil = 9$$
+				\item	Es gibt keinen Unterschied in der Rahmengröße hier. Aus diesem Grund kann man wie bei der ii) $9$ Bit für die Darstellung der Sequenznummern verwenden.
 			\end{enumerate}
-	\item	
+	\item	$$\frac{501 \cdot 2450 \cdot 8 \text{b}}{0.01002 \text{s}} = 980000000 \frac{\text{b}}{\text{s}} \hat{=} 980 \frac{\text{Mb}}{\text{s}}$$
 \end{enumerate}
 
 
