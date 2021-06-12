@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[a4paper, left=2cm, right=2cm, top=3cm, bottom=3cm]{geometry}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{listings}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,shapes.multipart}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Tutorium 02 \\ Abgabegruppe 01}
+\chead{Blatt 05 \\ DatKom}
+\rhead{Andrés Montoya, 405409 \\ Til Mohr, 405959}
+
+\begin{document}
+
+\begin{center}\fcolorbox{red}{yellow}{\begin{minipage}{35em}
+	Bei uns war ursprünglich noch ein Dritter in unserer Abgabegruppe eingeteilt. Wir haben ihn vor über einer Woche versucht per E-Mail zu erreichen, leider erfolglos.\\
+	Nach Ablauf der Anmeldefrist zu den Abgabegruppen haben wir gesehen, dass diese Person leider unsere Abgabegruppe verlassen hat.\\
+	Bisher konnten wir noch keinen Dritten für unsere Abgabegruppe finden.\\
+	Uns wurde auch seit dem letzten Blatt keine weitere Person zugeteilt.
+\end{minipage}}\end{center}
+
+
+
+\section*{Aufgabe 4.1}
+
+
+\newpage
+
+
+\section*{Aufgabe 4.2}
+\begin{enumerate}[label=\alph*)]
+	\item	$$\frac{64 \cdot 10 \text{Gbit/s}}{10 \text{ms}} \hat{=} \frac{640 \cdot 10^9 \text{bit/s}}{10^{-2} \text{s}} = 6.4 \cdot 10^9 \text{bit} \hat{=} 6.4 \text{Gbit}$$
+	\item	Latenz $AC-FA$: $l_{ac-fa} \coloneqq \frac{200 \text{km}}{200000 \text{km/s}} = 0.001 \text{s}$ \\
+			Latenz $FA-NY$: $l_{fa-ny} \coloneqq \frac{6135 \text{km}}{200000 \text{km/s}} = 0.030675 \text{s}$ \\
+			Latenz $NY-SF$: $l_{ny-sf} \coloneqq \frac{4000 \text{km}}{200000 \text{km/s}} = 0.02 \text{s}$ \\
+			
+			$L=1400 \text{Byte} \hat{=} 11200 \text{bit}$, Queue $1.5 \text{MB} \hat{=} 12 \cdot 10^6 \text{bit}$: \\
+			Übertragungszeit $AC-FA$: $u_{ac-fa} \coloneqq l_{ac-fa} + \frac{11200 \text{bit}}{1 \cdot 10^9 \text{bit/s}} = l_{ac-fa} + 0.0000112 \text{s} = 0.0010112 \text{s}$ \\
+			Übertragungszeit $FA-NY$: $u_{fa-ny} \coloneqq l_{fa-ny} + \frac{11200 \text{bit}}{1 \cdot 10^9 \text{bit/s}} = l_{ac-fa} + 0.0000112 \text{s} = 0.0306862 \text{s}$ \\
+			Übertragungszeit $NY-SF$: $u_{ny-sf} \coloneqq l_{ny-sf} + \frac{11200 \text{bit}}{10 \cdot 10^6 \text{bit/s}} = l_{ac-fa} + 0.00112 \text{s} = 0.02112 \text{s}$ \\
+			Sendezeit Queue $NY-SF$: $qs_{ny-sf} \coloneqq \frac{12 \cdot 10^6 \text{bit}}{10 \cdot 10^6 \text{bit/s}} = 1.2 \text{s}$\\
+			
+			Wartedauer $800 \text{ns} \hat{=} 8 \cdot 10^{-7} \text{s}$
+			Gesamtübertragung $AC-NY$: $gu_{ac-ny} \coloneqq u_{ac-fa} + (u_{fa_ny} + 8 \cdot 10^{-7} \text{s}) + 8 \cdot 10^{-7} \text{s} = 0.031699 \text{s}$.
+			Da $qs_{ny-sf} > gu_{ac-ny}$, wird das Paket noch $qs_{ny-sf} - gu_{ac-ny}$ in $NY$ gequeued. Das letze Bit vom Paket tritt also nach $gu_{ac-sf} \coloneqq qs_{ny-sf} + u_{ny-sf} = 1.2 \text{s} + 0.02112 \text{s} = 1.22112 \text{s}$ ein.
+	\item	$L'_{ny-sf} \coloneqq L + 192 \text{bit} = 11392 \text{bit}$, Queue $1.5 \text{MB} + 1500 \cdot 192 \text{bit} \hat{=} 12288 \cdot 10^3 \text{bit}$: \\
+			$u'_{ny-sf} \coloneqq l_{ny-sf} + \frac{11392 \text{bit}}{10 \cdot 10^6 \text{bit/s}} = l_{ac-fa} + 0.0011392 \text{s} = 0.0211392 \text{s}$ \\
+			$qs'_{ny-sf} \coloneqq \frac{12288 \cdot 10^3 \text{bit}}{10 \cdot 10^6 \text{bit/s}} = 1.2288 \text{s}$\\
+			
+			Da $gs'_{ny-sf} > gu_{ac-ny}$ wird das Paket trotzdem noch gequeued. Die neue totale Übertragungszeit beträgt $gu'_{ac-sf} \coloneqq qs'_{ny-sf} + u'_{ny-sf} = 1.2288 \text{s} + 0.0211392 \text{s} = 1.2499392 \text{s}$
+	\item	Der Anfangszeitpunkt steigt, da wir nun $18500$ weitere $192 \text{bit}$ übertragen müssen:\\
+			Queue $L'_{ny-sf} + 5000 \cdot 192 \text{bit} = 1.5 \text{MB} + 20000 \cdot 192 \text{bit} \hat{=} 15840000 \text{bit}$
+			$gs''_{ny-sf} \coloneqq \frac{15840000 \text{bit}}{10 \cdot 10^6 \text{bit/s}} = 1.584 \text{s}$.\\
+			Also trifft das letzte Bit unseres Paketes nach $gu''_{ac-sf} \coloneqq qs''_{ny-sf} + u'_{ny-sf} = 1.584 \text{s} + 0.0211392 \text{s} = 1.6051392 \text{s}$ ein.
+\end{enumerate}
+
+\end{document}
