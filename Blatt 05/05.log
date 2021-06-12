@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  12 JUN 2021 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.4.9)  12 JUN 2021 17:19
 entering extended mode
 **./05.tex
 (05.tex
@@ -713,12 +713,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1{C:/Users/Til Mohr/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
 
-Overfull \hbox (0.35127pt too wide) in paragraph at lines 46--51
+Overfull \hbox (0.35127pt too wide) in paragraph at lines 71--76
 []\OT1/cmr/m/n/12 Ubertra-gungszeit $\OML/cmm/m/it/12 FA \OMS/cmsy/m/n/12   \OM
 L/cmm/m/it/12 NY$\OT1/cmr/m/n/12 : $\OML/cmm/m/it/12 u[] [][]\OT1/cmr/m/n/12 = 
 \OML/cmm/m/it/12 l[] \OT1/cmr/m/n/12 + [] = \OML/cmm/m/it/12 l[] \OT1/cmr/m/n/1
@@ -727,12 +727,12 @@ m/n/12 0306862[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--51
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
@@ -752,7 +752,7 @@ Here is how much of TeX's memory you used:
  33843 multiletter control sequences out of 15000+600000
  407446 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 113i,12n,116p,431b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,12n,116p,431b,412s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmbx12.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Til Mohr/AppData/Local/Programs
@@ -764,7 +764,7 @@ b><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
 cm/cmr8.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb><C:/Users/Til Mohr/AppData/Local/Programs/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on 05.pdf (2 pages, 97174 bytes).
+Output written on 05.pdf (2 pages, 100066 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
