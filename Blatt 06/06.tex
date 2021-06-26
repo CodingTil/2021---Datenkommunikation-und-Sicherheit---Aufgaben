@@ -43,8 +43,22 @@
 
 \section*{Aufgabe 6.2}
 \begin{enumerate}[label=\alph*)]
-	\item	
-	\item	
+	\item	\begin{center}\begin{tabular}{c|c|c|c|c|c|c|}
+				Prot. & IP local & Port local & IP global & Port global & IP target & Port target \\
+				\hline\hline
+				\multicolumn{7}{c}{$\cdots$}\\
+				\hline
+				TCP & 172.16.0.16 & 6937 & 134.135.17.12 & 6938 & 212.66.4.64 & 443 \\
+				TCP & 172.16.0.3 & 8532 & 134.135.17.12 & 8534 & 212.66.19.7 & 443 \\
+				TCP & 172.16.0.7 & 5543 & 134.135.17.12 & 5543 & 212.66.37.12 & 443 \\
+			\end{tabular}\end{center}
+	\item	Port Forwarding:
+			\begin{center}\begin{tabular}{c|c|c|c|c|c|c|}
+				Prot. & IP local & Port local & IP global & Port global & IP target & Port target \\
+				\hline\hline
+				TCP & \textit{web-ip} & 80 & \textit{global-ip} & 80 & * & * \\
+			\end{tabular}\end{center}
+			Hierbei wird der Webserver (immer auf Port 80) local auf \textit{web-ip} gehostet und ist mit der öffentlichen IP \textit{global-ip} und Port 80 zugänglich. * steht hierfür für eine Wildcard: Es darf jeder vor Außen mit jedem Port Anfragen auf den Webserver senden: Also soll jede Anfrage auf \textit{global-ip}:80 zu unserem Webserver weitergeleitet werden.
 \end{enumerate}
 
 
@@ -52,6 +66,34 @@
 
 
 \section*{Aufgabe 6.3}
+\begin{itemize}
+	\item	Header Länge: $20 \text{B}$
+	\item	Datenlänge: $2996 \text{B} - 20 \text{B} = 2976 \text{B}$
+\end{itemize}
+
+Sei das Originalpaket: $P(\verb|TL|=2996, \verb|ID|=17, \verb|MF|=0, \verb|Offset|=744)$\\
+
+$P$ wird an Router 1 in 2 Pakete $P_1, P_2, P_3$ geteilt mit:
+
+\begin{itemize}
+	\item	$P_1(\verb|TL|=1492, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=744)$
+	\item	$P_2(\verb|TL|=1492, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=928)$
+	\item	$P_3(\verb|TL|=52, \verb|ID|=17, \verb|MF|=0, \verb|Offset|=932)$
+\end{itemize}
+
+$P_1$, $P_2$ werden an Router 2 in Pakete $P_{11}, P_{12}, P_{13}, P_{14}, P_{21}, P_{22}, P_{23}, P_{24}$ geteilt mit:
+
+\begin{itemize}
+	\item	$P_{11}(\verb|TL|=508, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=744)$
+	\item	$P_{12}(\verb|TL|=508, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=805)$
+	\item	$P_{13}(\verb|TL|=508, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=866)$
+	\item	$P_{14}(\verb|TL|=28, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=867)$
+\\
+	\item	$P_{21}(\verb|TL|=508, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=928)$
+	\item	$P_{22}(\verb|TL|=508, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=989)$
+	\item	$P_{23}(\verb|TL|=508, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=1050)$
+	\item	$P_{24}(\verb|TL|=28, \verb|ID|=17, \verb|MF|=1, \verb|Offset|=1051)$
+\end{itemize}
 
 
 \newpage
@@ -68,4 +110,10 @@
 
 
 \section*{Aufgabe 6.5}
+\includegraphics[scale=0.5]{6.5.png}
+
+Die Switches $B$ und $C$ werden nicht von \verb|traceroute| ermittelt, da diese nur Layer-2-Switches sind, und somit keine keine ICMP-Nachrichten entsenden und wichtiger noch, die \verb|TTL| nicht verändern.\\
+Wegen dem Loadbalancer $D$ wird erst Router $E$ als nächstes nach $D$ auf dem Pfad ermittelt, das nächste Paket geht dann jedoch wieder über $G$ zu $H$. Da darauffolgende Paket wird wieder über $E$ und dann $D$ nach $I$ gesendet. Hierdurch entsteht also eine Ungenauigkeit (da $E$ und $H$ nicht direkt verbunden sind).\\
+Router $J$ entsendet zwar keine ICMP-Nachrichten, jedoch verändert er im Gegensatz zu den Switches $B$ und $C$ die \verb|TTL|. Das hierbei entstehende Problem ist, dass $S$ dieses Paket als verloren ansehen muss und somit eine \textbf{Lücke im Pfad} entsteht.
+
 \end{document}
