@@ -44,11 +44,26 @@
 										Maximale Rahmenlänge: $10 \cdot 10^9 \text{bit/s} \cdot 5.5 \cdot 10^{-8} \text{s} = 550 \text{bit} \Rightarrow 69 \text{Byte}$
 						\end{enumerate}
 				\item	\begin{enumerate}[label=\arabic*.]
-							\item		
-							\item[2.+3.]$5.5 \cdot 10^{-8} \text{s} + \frac{552 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 1.102 \cdot 10^-7 \text{s}$
+							\item		Mittlere Wartezeit von Sendewunsch zu Senderecht, wenn Token gegenüber von $A$, also bei $D$ liegt.\\
+										Übertragungszeit vom Token von $D$ zu $B$: $tu_{d-b} \coloneqq \frac{6 \text{m}}{2 \cdot 10^8 \text{m/s}} + \frac{24 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 3 \cdot 10^{-8} \text{s} + 2.4 \cdot 10^{-9} \text{s} = 3.24 \cdot 10^{-8} \text{s}$\\
+										Übertragungszeit vom Token von $B$ zu $A$: $tu_{b-a} \coloneqq \frac{10 \text{m}}{2 \cdot 10^8 \text{m/s}} + \frac{24 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 5 \cdot 10^{-8} \text{s} + 2.4 \cdot 10^{-9} \text{s} = 7.4 \cdot 10^{-8} \text{s}$\\
+										
+										Übertragungszeit vom Rahmen von $A$ zu $C$: $u_{a-c} \coloneqq \frac{6 \text{m}}{2 \cdot 10^8 \text{m/s}} + \frac{168 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 3 \cdot 10^{-8} \text{s} + 1.68 \cdot 10^{-8} \text{s} = 4.68 \cdot 10^{-8} \text{s}$\\
+										Übertragungszeit vom Rahmen von $C$ zu $D$: $u_{c-d} \coloneqq \frac{10 \text{m}}{2 \cdot 10^8 \text{m/s}} + \frac{168 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 5 \cdot 10^{-8} \text{s} + 1.68 \cdot 10^{-8} \text{s} = 6.18 \cdot 10^{-8} \text{s}$\\
+										
+										Mittlere Zeit vom Sendewunsch zum vollständigen Empfang: $tu_{d-b} + tu_{b-a} + u_{a-c} + u_{c-d} = 21.5 \cdot 10^{-8} \text{s}$
+										
+							\item[2.+3.]$5.5 \cdot 10^{-8} \text{s} + \frac{552 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 1.102 \cdot 10^{-7} \text{s}$
 						\end{enumerate}
 				\item	\begin{enumerate}[label=\arabic*.]
-							\item	
+							\item	Kreissendezeit (Rahmen einmal im Ring): $ks \coloneqq 2 \cdot (u_{a-c} + u_{c-d}) = 21.72 \cdot 10^{-8} \text{s}$ \\
+									
+									Wartezeit, wenn $B$ gerade sendet: $wu_b \coloneqq ks + tu_{b-a} = 29.12 \cdot 10^{-8} \text{s}$ \\
+									Wartezeit, wenn $C$ gerade sendet: $wu_c \coloneqq ks + tu_{b-a} + tu_{d-b} + wu_b = 61.38 \cdot 10^{-8} \text{s}$ \\
+									
+									Mittlere Wartezeit: $wu \coloneqq \frac{wu_b + wu_c}{2} = 45.3 \cdot 10^{-8} \text{s}$ \\
+									Mittlere Zeit vom Sendewunsch zum vollständigen Empfang: $wu + u_{a-c} + u_{c-d} = 56.16 \cdot 10^{-8} \text{s}$
+				
 							\item	Wenn $B$ und $C$ nicht durch BEB gebremst werden, dann erfährt nur $A$ permanent Kollision, weshalb $A$ nach der 16 Kollision laut Vorlesung den Rahmen verwirft. Dementsprechend kommt das Paket nie an.
 							\item	$5.5 \cdot 10^{-8} \text{s} + \frac{552 \text{bit}}{10 \cdot 10^9 \text{bit/s}} = 1.102 \cdot 10^-7 \text{s}$\\
 									Aufgrund des Switches entstehen hier keine Kollisionen.
