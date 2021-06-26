@@ -31,16 +31,38 @@
 
 
 \section*{Aufgabe 6.1}
-????????
 \begin{enumerate}[label=\alph*)]
 	\item	\begin{itemize}
 				\item	LAN 1: $137.226.40.0/23$
 				\item	LAN 2: $137.226.42.0/25$
 				\item	LAN 3: $137.226.43.0/24$
-				\item	LAN 4: $137.226.42.0/27$
+				\item	LAN 4: $137.226.42.128/27$
 			\end{itemize}
-	\item	
-	\item	
+	\item	Die höchste Adresse ist immer reserviert für Broadcasting und die Niedrigste repräsentiert das Netzwerk und wird nie vergeben (nach VL).\\
+			
+			\begin{center}\begin{tabular}{c|c|c}
+				LAN & H/R & IPv4 \\
+				\hline\hline
+				LAN 1 & h1 & 137.226.41.254 \\
+				LAN 1 & h2 & 137.226.41.254 \\
+				LAN 1 & A.if1 & 137.226.40.1 \\
+				\hline
+				LAN 2 & h3 & 137.226.42.126 \\
+				LAN 2 & A.if2 & 137.226.42.1 \\
+				LAN 2 & B.if1 & 137.226.42.2 \\
+				\hline
+				LAN 2 & h4 & 137.226.43.254 \\
+				LAN 2 & B.if2 & 137.226.43.1 \\
+				\hline
+				LAN 2 & h5 & 137.226.42.190 \\
+				LAN 2 & B.if3 & 137.226.42.129 \\
+			
+			\end{tabular}\end{center}
+	\item	\begin{itemize}
+				\item	Paket 1: Netzwerkarte 2
+				\item	Paket 2: Netzwerkarte 3
+				\item	Paket 1: Netzwerkarte 8
+			\end{itemize}
 \end{enumerate}
 
 
