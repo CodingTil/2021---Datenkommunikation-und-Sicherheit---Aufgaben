@@ -44,7 +44,7 @@
 				LAN & H/R & IPv4 \\
 				\hline\hline
 				LAN 1 & h1 & 137.226.41.254 \\
-				LAN 1 & h2 & 137.226.41.254 \\
+				LAN 1 & h2 & 137.226.41.253 \\
 				LAN 1 & A.if1 & 137.226.40.1 \\
 				\hline
 				LAN 2 & h3 & 137.226.42.126 \\
@@ -54,14 +54,14 @@
 				LAN 2 & h4 & 137.226.43.254 \\
 				LAN 2 & B.if2 & 137.226.43.1 \\
 				\hline
-				LAN 2 & h5 & 137.226.42.190 \\
+				LAN 2 & h5 & 137.226.42.158 \\
 				LAN 2 & B.if3 & 137.226.42.129 \\
 			
 			\end{tabular}\end{center}
 	\item	\begin{itemize}
 				\item	Paket 1: Netzwerkarte 2
-				\item	Paket 2: Netzwerkarte 3
-				\item	Paket 1: Netzwerkarte 8
+				\item	Paket 2: Netzwerkarte 1
+				\item	Paket 3: Netzwerkarte 8
 			\end{itemize}
 \end{enumerate}
 
@@ -130,7 +130,19 @@ $P_1$, $P_2$ werden an Router 2 in Pakete $P_{11}, P_{12}, P_{13}, P_{14}, P_{21
 \section*{Aufgabe 6.4}
 \begin{enumerate}[label=\alph*)]
 	\item	\includegraphics[scale=0.5]{6.4_a.png}
-	\item	
+	\item	Request H2.EN0 137.226.0.243 137.226.3.234 \\
+			Request H2.EN1 137.226.3.56 137.226.3.234 \\
+			
+			Request R1.EN1 137.226.0.1 137.226.3.234 \\
+			Request R2.EN0 137.226.3.1 137.226.3.234 \\
+			Request R2.EN2 137.226.3.129 137.226.3.234 \\
+			
+			Request R3.EN2 134.130.1.2 137.226.3.234 \\
+			Response H1.EN0 137.226.3.234 R2.EN2 137.226.3.129 \\
+			
+			Response R2.EN2 137.226.3.129 H2.EN1 137.226.3.56 \\
+			
+			Data H2.EN1 H1.EN0
 \end{enumerate}
 
 
