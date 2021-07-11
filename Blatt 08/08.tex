@@ -38,7 +38,8 @@
 	\item	Mit dem ersten Paket teilt Host 1 Host 2 seine Initialparameter aus. Mit dem zweiten Paket bestätigt Host 2 diese und teilt Host 1 seine Initialparameter aus. Mit dem dritten Paket bestätigt Host 1 diese. Würde man diese Bestätigung wegfallen lassen, so könnte es Vorkommen, dass beispielsweise die Sequenznummer von Host 2 nicht mit Host 1 synchronisiert ist. Dadurch wäre die Kommunikation gestört.
 	\item	Nein, wäre noch sinnvoll: Router verwerfen Pakete absichtlich bei Stau. Dann würde ja ein solches Paket nicht zuverlässig übertragen werden.
 	\item	Ja. Das Paket wird als verloren anerkannt, wenn es nach RTT immer noch nicht bestätigt wurde, oder wenn nach dem verlorenen ACK noch ein weiteres / weitere ACKs eintreten, sodass das Paket wegen 3-ACKs retransmittet wird.
-	\item	Schnelligkeit und Effizienz.
+	\item	Eigenschaften: Schnelligkeit und Effizienz.\\
+			Funktion: Ports - Man kann verschiedene Services parallel nutzen, wie bei TCP.
 	\item	Ja. Man kann einen weiteren Dienst / Protokoll basierend auf UDP entwickeln, welche dann zuverlässig ist (genauso wie TCP auf IP ist).
 \end{enumerate}
 
@@ -80,7 +81,8 @@
 						Angenommen man findet eine sich wiederholende Zeichenfolge der Länge $m$ im Ciphertext und man geht davon aus, dass der Schlüssel sich hier wiederholte. Dann beträgt die minimale Schlüssellänge $m$. Beginnt die Zeichenfolge im $i$-ten Zeichen im Ciphertext, so ist die minimale Schlüssellänge $m'$, sodass $\lfloor \frac{i}{m} \rfloor = \frac{i}{m'} \in \mathbb{N}$.
 				\item	In Zeile 2 und Zeile 3 sind solche Zeichenfolgenwiederholungen. Die längere Zeichenfolge beträgt $12$ Zeichen. Der Schlüssel beträgt $16$ Zeichen (Vorgehensweise oben).
 			\end{enumerate}
-	\item	Key: \verb|DATKOM| - wie zu erwarten.
+	\item	Key: \verb|DATKOM| - wie zu erwarten.\\
+			\textit{Der Link geht nicht.}
 \end{enumerate}
 
 
